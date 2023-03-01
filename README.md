@@ -4,8 +4,8 @@
 My first project that plays with an AI person and communicates with the same via chat, also the first encounter with the OpenAI model. A very challenging project for me, with a lot of new things that I learned and adopted.
 
 <hr/>
-
 --------> Commands for running server and client side <---------
+</br>
 Take care to be in the <strong>server</strong> folder then hit:
 
 ``` npm run server ``` 
