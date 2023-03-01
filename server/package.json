@@ -1,10 +1,10 @@
 {
   "name": "the_botfather",
   "version": "1.0.0",
-  "description": "Modern interface that resembles the ChatGPT app, communication with advanced GPT3 model API, and most importantly \r the ability to ask the AI for help regarding JavaScript, React, or any other programming language, \r giving it code and translating it to another programming language.",
-  "main": "index.js",
+  "description": "Modern interface that resembles the ChatGPT JavaScript App.",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon server"
   },
   "repository": {
     "type": "git",

@@ -64,12 +64,12 @@ const handleSubmit = async (e) => {
 
   const data = new FormData(form);
 
-  // user's chatstripe
+  // user's chat stripe
   chatContainer.innerHTML += chatStripe(false, data.get('prompt'));
 
   form.reset();
 
-  // bot's chatstripe
+  // bot's chat stripe
   const uniqueId = generateUniqueId();
   chatContainer.innerHTML += chatStripe(true, " ", uniqueId);
 
