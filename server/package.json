@@ -1,0 +1,27 @@
+{
+  "name": "the_botfather",
+  "version": "1.0.0",
+  "description": "Modern interface that resembles the ChatGPT JavaScript App.",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laststonedjs/The_BotFather_ChatGPT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laststonedjs/The_BotFather_ChatGPT/issues"
+  },
+  "homepage": "https://github.com/laststonedjs/The_BotFather_ChatGPT#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "openai": "^3.2.0"
+  }
+}
