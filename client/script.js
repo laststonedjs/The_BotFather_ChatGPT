@@ -24,7 +24,7 @@ function typeText(element, text) {
   let interval = setInterval(() => {
     if (index < text.length) {
       // this is going to get a character under a specific index in the text that AI is going to return
-      element.innerHTML += text.chartAt(index);
+      element.innerHTML += text.charAt(index);
       index++;
     } else {
       clearInterval(interval);
