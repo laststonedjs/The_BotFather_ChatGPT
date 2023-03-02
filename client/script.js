@@ -71,7 +71,7 @@ const handleSubmit = async (e) => {
 
   // bot's chat stripe
   const uniqueId = generateUniqueId();
-  chatContainer.innerHTML += chatStripe(true, " ", uniqueId);
+  chatContainer.innerHTML += chatStripe(true, "", uniqueId);
 
   chatContainer.scrollTop = chatContainer.scrollHeight;
 
@@ -80,7 +80,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   // fetch data from server -> bot's response
-  const response = await fetch('https://the-botfather-chatgpt.onrender.com/', {
+  const response = await fetch("https://the-botfather-chatgpt.onrender.com", {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
