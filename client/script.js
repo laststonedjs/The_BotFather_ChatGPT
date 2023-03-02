@@ -12,10 +12,10 @@ function loader(element) {
   loadInterval = setInterval(() => {
     element.textContent += '.';
 
-    if (element.textContext === ' ... ') {
-      element.textContent = ' ';
+    if (element.textContent === '....') {
+      element.textContent = '';
     }
-  }, 300);
+  }, 300)
 }
 
 function typeText(element, text) {
@@ -64,14 +64,15 @@ const handleSubmit = async (e) => {
 
   const data = new FormData(form);
 
-  // user's chat stripe
+  // user's chatstripe
   chatContainer.innerHTML += chatStripe(false, data.get('prompt'));
 
+  // to clear the textarea input 
   form.reset();
 
-  // bot's chat stripe
+  // bot's chatstripe
   const uniqueId = generateUniqueId();
-  chatContainer.innerHTML += chatStripe(true, "", uniqueId);
+  chatContainer.innerHTML += chatStripe(true, " ", uniqueId);
 
   chatContainer.scrollTop = chatContainer.scrollHeight;
 
@@ -79,8 +80,8 @@ const handleSubmit = async (e) => {
 
   loader(messageDiv);
 
-  // fetch data from server -> bot's response
-  const response = await fetch("https://the-botfather-chatgpt.onrender.com", {
+  // fetch data from server -> bot's response https://the-botfather-chatgpt.onrender.com
+  const response = await fetch('http://localhost:5000', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -97,6 +98,7 @@ const handleSubmit = async (e) => {
     const data = await response.json();
     const parsedData = data.bot.trim();
 
+    console.log({ parsedData });
     typeText(messageDiv, parsedData);
   } else {
     const error = await response.text();

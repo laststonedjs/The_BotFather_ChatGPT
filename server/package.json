@@ -1,6 +1,7 @@
 {
   "name": "the_botfather",
   "version": "1.0.0",
+  "private": true,
   "description": "Modern interface that resembles the ChatGPT JavaScript App.",
   "type": "module",
   "scripts": {
